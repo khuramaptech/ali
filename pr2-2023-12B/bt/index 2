@@ -1,0 +1,30 @@
+<DOCTYPE HTML>
+<html>
+
+<HEAD>
+    <title>AUDIO $ VIDEO<?<Title>
+</HEAD>
+
+<boady>
+    <table border="1">
+        <tr>
+            <th>sno</th>
+            <th>audio</th>
+            <th>video</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <td>1</td>
+                <td>
+                    <audic src="music.mp3" title="audio"></audic>
+                </td>
+                <td>
+                    <videc src="media1.mp4" width="600px" title="power point video" loop autoplav
+                    muted></videc>
+                </td>
+              </tr> 
+         </table>
+            
+         
+            

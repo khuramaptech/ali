@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="counter"></p>
+
+    <button class="start"onclick="startWebWorker()">Start</button>
+    <button class="stop" onclick=" stopWebWorkers()">Stop</button>
+
+    
+
+   <script>
+
+        let counter = 0;
+
+        let start = document.querySelector(".start");
+        let stop = document.querySelector(".stop");
+        let counterPara = document.querySelector("#counter");
+
+        const startCounter = () => {
+
+            counter += 1;
+
+            
+            counterPara.innerHTML = counter;
+        }
+
+        start.addEventListener("click" , () => {
+            startCounter();
+        })
+        let intervalId =   setInterval(startCounter, 1000)
+
+
+
+        const stopCounter = () => {
+            clearInterval(intervalId);
+        }
+
+        stop.addEventListener("click",()=>{
+            stopCounter();
+        })
+
+        
+    </script> 
+
+    <!-- <script>
+
+        let w ;
+
+        function startWebWorker(){
+            if(typeof(Worker) != "undefined"){
+
+                if(typeof(w) == "undefined"){
+                    w = new Worker("script.js")
+                }
+                w.onmessage = function(e){
+                    document.getElementById("counter").innerHTML = e.data;
+                }
+
+            } else{
+                alert("Browser does not support")
+            }
+           
+        }
+
+        function stopWebWorkers(){
+                w.terminate();
+                w = undefined;
+            }
+
+    </script> -->
+
+
+</body>
+</html>
